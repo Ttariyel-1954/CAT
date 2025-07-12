@@ -233,6 +233,140 @@
             box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
         }
         
+        .portal-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); 
+            color: white; 
+            padding: 40px 30px; 
+            border-radius: 20px; 
+            margin: 50px 0 30px 0; 
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .portal-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+        
+        .portal-section::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            opacity: 0.2;
+        }
+        
+        .portal-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .portal-title {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+            font-weight: 300;
+        }
+        
+        .portal-description {
+            margin-bottom: 30px;
+            opacity: 0.9;
+            line-height: 1.7;
+            font-size: 1.2em;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .portal-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .portal-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .portal-link:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 30px rgba(52, 152, 219, 0.4);
+        }
+        
+        .portal-link.secondary {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
+        }
+        
+        .portal-link.secondary:hover {
+            box-shadow: 0 12px 30px rgba(231, 76, 60, 0.4);
+        }
+        
+        .portal-stats {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+        
+        .portal-stat {
+            text-align: center;
+        }
+        
+        .portal-stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3498db;
+        }
+        
+        .portal-stat-label {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        .author-info {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .author-info p {
+            margin: 0;
+            font-size: 1em;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
         .footer {
             background: #2c3e50;
             color: white;
@@ -281,6 +415,17 @@
             
             .main-content {
                 padding: 20px;
+            }
+            
+            .portal-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .portal-link {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
             }
         }
     </style>
@@ -525,50 +670,64 @@
                 </div>
             </div>
         </main>
-<!-- Bu kodu CAT saytının index.html-ə derslərdən sonra əlavə edin -->
 
-<div style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); 
-            color: white; 
-            padding: 30px; 
-            border-radius: 15px; 
-            margin: 30px 0; 
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-    
-    <h3 style="color: white; margin-bottom: 15px; font-size: 1.6em;">
-        🎓 Əlavə Elmi Resursllar
-    </h3>
-    
-    <p style="margin-bottom: 20px; opacity: 0.9; line-height: 1.6;">
-        Testologiya, R proqramlaşdırma və təhsil analitikası üzrə daha çox elmi material və tətbiqlər üçün
-    </p>
-    
-    <a href="https://ttariyel-1954.github.io/talibov-tariyel/" 
-       target="_blank" 
-       style="display: inline-block; 
-              background: white; 
-              color: #2c3e50; 
-              padding: 15px 30px; 
-              border-radius: 25px; 
-              text-decoration: none; 
-              font-weight: 600; 
-              font-size: 1.1em;
-              transition: all 0.3s ease;
-              box-shadow: 0 5px 15px rgba(255,255,255,0.2);"
-       onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 25px rgba(255,255,255,0.3)';"
-       onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(255,255,255,0.2)';">
-        
-        🌐 Talıbov Tariyel Elmi Portal
-    </a>
-    
-    <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.7;">
-        15+ R Tətbiqi | 20+ Elmi Yazı | Testologiya Araşdırmaları
-    </p>
-</div>
+        <!-- Portal Section -->
+        <section class="portal-section">
+            <div class="portal-content">
+                <h2 class="portal-title">🎓 Əlavə Elmi Resursllar</h2>
+                
+                <p class="portal-description">
+                    CAT və testologiya sahəsində daha ətraflı elmi materiallar, R tətbiqləri və tədqiqat nəticələri üçün müəllifin şəxsi elmi portalını ziyarət edin
+                </p>
+                
+                <div class="portal-buttons">
+                    <a href="https://ttariyel-1954.github.io/talibov-tariyel/" target="_blank" class="portal-link">
+                        <span style="font-size: 1.3em;">🌐</span>
+                        <span>Şəxsi Elmi Portal</span>
+                    </a>
+                    
+                    <a href="https://ttariyel-1954.github.io/talibov-tariyel/#applications" target="_blank" class="portal-link secondary">
+                        <span style="font-size: 1.2em;">💻</span>
+                        <span>R Tətbiqləri</span>
+                    </a>
+                </div>
+                
+                <div class="portal-stats">
+                    <div class="portal-stat">
+                        <div class="portal-stat-number">15+</div>
+                        <div class="portal-stat-label">R Shiny Tətbiqi</div>
+                    </div>
+                    <div class="portal-stat">
+                        <div class="portal-stat-number">25+</div>
+                        <div class="portal-stat-label">Elmi Material</div>
+                    </div>
+                    <div class="portal-stat">
+                        <div class="portal-stat-number">31</div>
+                        <div class="portal-stat-label">İl Təcrübə</div>
+                    </div>
+                </div>
+                
+                <div class="author-info">
+                    <p>
+                        <strong>👨‍🎓 Talıbov Tariyel İsmayıl oğlu</strong><br>
+                        <span style="color: #f1c40f;">Riyaziyyat üzrə fəlsəfə doktoru</span> | 
+                        <span style="color: #e74c3c;">Azərbaycan Respublikasının əməkdar müəllimi</span><br>
+                        <span style="opacity: 0.8;">Azərbaycan Təhsil İnstitutunun direktor müavini</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <footer class="footer">
             <p>&copy; 2025 CAT Test Collection</p>
             <p>Kompüter Adaptiv Testləşmə üzrə təlim materialları</p>
             <p>Təhsil və tədqiqat məqsədilə hazırlanmışdır</p>
+            <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.7;">
+                🔗 Daha çox elmi material üçün: 
+                <a href="https://ttariyel-1954.github.io/talibov-tariyel/" target="_blank" style="color: #74b9ff; text-decoration: none;">
+                    Talıbov Tariyel Elmi Portal
+                </a>
+            </p>
         </footer>
     </div>
 
